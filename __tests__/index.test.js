@@ -18,7 +18,10 @@ describe('Smallest and Largest Array', () => {
   test('returns an empty array when largest() is sent an empty argument', () => {
     expect(largest()).toEqual([]);
   });
-  test('returns the largest number given an array when smallest is passed an array', () => {
+  test('returns the largest number given an array when largest() is passed an array', () => {
     expect(largest(numberData)).toEqual(99);
+  });
+  test('returns the second largest number given an array when largest() is passed an array', () => {
+    expect(largest(numberData, 2)).toEqual(66);
   });
 });
