@@ -1,4 +1,4 @@
-const { smallest, largest } = require('../index');
+const { smallest, largest, countEven  } = require('../index');
 
 const numberData = [1, 0, 2, 3, 56, 5, 66, 7, 8, 99, 10];
 
@@ -31,3 +31,12 @@ describe('Largest Array ', () => {
     expect(largest(numberData, 2)).toEqual(66);
   });
 });
+
+describe('Count of Elements In a given array of integers ', () => {
+  test('returns 0 if passed an empty array ', () => {
+    expect(countEven([])).toEqual(0);
+  })
+  test('Count the number of even numbers and return the answer', () => {
+    expect(countEven(numberData)).toEqual(5);
+  })
+})

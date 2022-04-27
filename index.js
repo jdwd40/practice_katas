@@ -20,6 +20,15 @@ const largest = (arr1, n) => {
   return Math.max.apply(null, arr1);
 };
 
+const countEven = (arr) => {
+  if (arr == undefined || arr.length === 0) return 0;
+  const evens = arr.filter((e) => {
+    return e % 2 === 0 && e !== 0;
+  });
+  console.log(evens);
+  return evens.length;
+};
+
 // sort thu array arrange it from smallest to largest
 // select the element thats being asked for from the argument
-module.exports = { smallest, largest };
+module.exports = { smallest, largest, countEven };
