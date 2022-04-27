@@ -1,8 +1,12 @@
-const smallest = (arr) => {
+const smallest = (arr, n) => {
   if (arr === undefined || arr.length === 0) return [];
+  if (n === undefined) {
+    n = 0;
+  }
   console.log('inside smallest()');
-  // find smallest number in array
-  return Math.min(...arr);
+  let max = Math.min.apply(null, arr);
+  arr.splice(arr.indexOf(max), n); // remove n from max from the array
+  return Math.min.apply(null, arr);
 };
 
 const largest = (arr1, n) => {
